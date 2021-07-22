@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+header {
+	font-size: 20px;
+	background-color: black;
+	color: #cccccc;
+	height: 90px;
+}
+#topbar{
+	width:75%;
+	margin-left: auto ;
+  margin-right: auto ;
+}
+#topbar a{
+	color: white;
+	text-decoration: none;
+}
+/* nav {
+	float: right;
+}
+nav li{
+	display: inline;
+	padding-right: 30px;
+} */
+.logo {
+  font-family: Georgia, Times, "Times New Roman", serif;
+	font-size:30px;
+	padding:20px;
+}
+
+.box{
+	margin-top: 20px;
+	width:75%;
+	margin-left: auto ;
+  margin-right: auto ;
+  min-height: 400px;
+}
+
+.blog-post{
+	margin-top:20px;
+	margin-bottom:30px;
+}
+.blog-heading{
+	font-size: 36px;
+	margin-bottom:20px;
+	margin-top:10px;
+}
+.blog-heading a{
+	color: black;
+	text-decoration: none;
+}
+.blog-date{
+	font-size: 12px;
+}
+.blog-body{
+	margin-bottom: 40px;
+}
+.sidebar{
+	float:right;
+}
+#button-add{
+  margin : 20px;
+}
+textarea{
+	resize: none;
+}
+footer{	
+	color: black;	
+	margin-left: auto ;    
+	margin-right: auto ;	
+	font-size:16px;	
+	min-height: 50px;	
+	padding:20px;	
+	border-top: 1px solid #f0f0f0;	
+}
+#footer{	
+	width:75%;
+	margin-left: auto ;    
+	margin-right: auto ;
+}
+
+.pagination-wrapper{
+	padding-top: 20px;
+}
+
+.pagination-wrapper ul{
+	padding-inline-start:0px !important;
+}
+
+.pagination {
+  margin: 15px auto;
+  display: flex;
+	align-items: center;
+  justify-content: center;
+  list-style: none;
+  outline: none;
+}
+.pagination > .active > a{
+  background-color: #0078e7 ;
+  border-color: #0078e7 ;
+  color: #fff;
+}
+.pagination > li > a{
+  border: 1px solid #0078e7 ;
+  padding: 5px 10px;
+  outline: none;
+  cursor: pointer;
+}
+.pagination > .active > a, .pagination > .active > span, .pagination > .active > a:hover, .pagination > .active > span:hover, .pagination > .active > a:focus, .pagination > .active > span:focus{
+  background-color: #0078e7 ;
+  border-color: #0078e7;
+  outline: none ;
+}
+.pagination > li > a, .pagination > li > span{
+  color: #0078e7
+}
+.pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > li:last-child > a, .pagination > li:last-child > span{
+  border-radius: unset
+}
