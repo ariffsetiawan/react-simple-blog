@@ -64,32 +64,6 @@ function Home() {
         </div>
     </div>
   );
-
-  // const allItems = useLiveQuery(() => db.posts.reverse().toArray(), []);
-  // if (!allItems) return null
-
-  // const postData = allItems.map(({ id, title, content, date }) => (
-  //   <div className="row" key={id}>
-  //     <div className="blog-heading">
-  //       <a href={'/post/'+id}>{title}</a>
-  //     </div>
-  //     <div className="blog-date">
-  //       {moment(date).format("MMMM D, YYYY")}
-  //     </div>
-  //     <div className="blog-body">
-  //         <p>{content}</p>
-  //     </div>
-  //   </div>
-  // ))
-
-  // return (
-  //   <div className="blog-post">
-  //     <div className="nav" id="button-add">
-  //       <a href="/add" className="pure-button pure-button-primary">Add New Post</a>
-  //     </div>
-  //       { postData }
-  //   </div>
-  // );
 }
 
 export default Home;

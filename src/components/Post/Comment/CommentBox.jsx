@@ -172,41 +172,21 @@ class CommentBox extends React.Component {
                     <div className={this.prefix('comment-content')}>
                         <div className={this.prefix('comment-header')}>
                         <div className="pure-g">
-                        {
-                                // this.props.usersHaveAvatars ?
-                                    // (
-                                        <img
-                                            className={'pure-u-1-5 '+this.prefix('user-avatar')}
-                                            src={comment.userAvatarUrl}
-                                            alt={comment.userNameDisplay}
-                                        />
-                                    // ) : null
+                        {  
+                            <img
+                                className={'pure-u-1-5 '+this.prefix('user-avatar')}
+                                src={comment.userAvatarUrl}
+                                alt={comment.userNameDisplay}
+                            />          
                         }
                         
                             <span className={'pure-u-4-5 '+this.prefix('user-name')}><span className="username-display">{comment.userNameDisplay}</span> <br/> <span className="timestamp-display">{comment.timestampDisplay}</span></span>
-                            {/* <span className={'pure-u-4-5 '+this.prefix('timestamp')}>{comment.timestampDisplay}</span> */}
                         </div>
                         </div>
                         <div className={this.prefix('comment-body')}>
                             {comment.bodyDisplay}
                         </div>
                         <div className={this.prefix('comment-footer')}>
-                            {/* {
-                                (comment.replies.length > 0) ?
-                                    (
-                                        <button
-                                            className={'pure-button pure-button-secondary '+this.prefix('toggle')}
-                                            value={comment.id}
-                                            onClick={this.onToggleContract}
-                                        >
-                                            {
-                                                this.state.contractedComments[comment.id] ?
-                                                this.props.expandButtonContent :
-                                                this.props.contractButtonContent
-                                            }
-                                        </button>
-                                    ) : null
-                            } */}
                             {
                                 (this.state.commentIdToReplyTo === comment.id) ?
                                     (
@@ -363,31 +343,6 @@ class CommentBox extends React.Component {
                         </form>
                         </div>
                     </div>
-                    {/* <form className={'pure-form pure-form-stacked '+this.prefix('comment-form')} onSubmit={this.onComment}>
-                        <div className={this.prefix('form-element')}>
-                            <textarea
-                                name="comment"
-                                rows={this.props.textareaRows}
-                                value={this.state.comment}
-                                onChange={this.onChangeComment}
-                                disabled={this.props.disabled}
-                            />
-                        </div>
-                        <div>
-                            {
-                                (!this.props.disabled) ?
-                                    (
-                                        <button type="submit">{this.props.postCommentButtonContent} X</button>
-                                    ) : null
-                            }
-                            {
-                                (!this.props.disabled) ? this.props.postButtonExtraContent : null
-                            }
-                        </div>
-                    </form> */}
-                    {/* {this.props.disabled ? (
-                        <this.props.disabledComponent {...this.props} />
-                    ) : null} */}
                 </div>
                 <div className={this.prefix('body')}>
                     <ul className={this.prefix('comments')}>
