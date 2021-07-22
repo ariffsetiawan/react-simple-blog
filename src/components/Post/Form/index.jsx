@@ -5,7 +5,7 @@ import { withRouter } from 'react-router-dom';
 
 const db = new Dexie('SimpleBlog');
 db.version(1).stores(
-  { posts: "++id,title,content,date" }
+  { posts: "++id,title,content,date", comments: "++id,post_id,parent_id,content,author,avatar,date" }
 )
 
 class Form extends React.Component {
@@ -15,7 +15,7 @@ class Form extends React.Component {
     this.state = {
       title: '',
       content: '',
-      date: moment().format("YYYY-MM-DD hh:mm:ss"),
+      date: moment().format("YYYY-MM-DD HH:mm:ss"),
     }
 
     this.handleChangeField = this.handleChangeField.bind(this);
@@ -44,20 +44,20 @@ class Form extends React.Component {
     const { title, content, date } = this.state;
 
     return (
-      <div className="pure-g">
-        <div className="pure-u-1-3"></div>
-        <div className="pure-u-1-3">
-          <form className="pure-form pure-form-stacked" onSubmit={event => this.submitForm(event)}>
-            <fieldset>
-              <legend>New Post</legend>
-              <input type="text" name="title" className="pure-input-1 title" placeholder="Title" required="" onChange={(ev) => this.handleChangeField('title', ev)} value={title} />
-              <textarea name="content" className="pure-input-1 content" placeholder="Content" required="" rows="10" onChange={(ev) => this.handleChangeField('content', ev)} value={content}></textarea>
-              <input type="text" name="date" className="pure-input-1 date" placeholder="Date" readOnly value={this.state.date} />
-              <button type="submit" className="pure-button pure-button-primary">Submit</button>
-            </fieldset>
-          </form>
+      <div className="blog-post">
+        <div className="pure-g">
+          <div className="pure-u-1 shadow-sm">
+            <form className="pure-form pure-form-stacked" onSubmit={event => this.submitForm(event)}>
+              <fieldset>
+                <legend>New Post</legend>
+                <input type="text" name="title" className="pure-input-1 title" placeholder="Title" required="" onChange={(ev) => this.handleChangeField('title', ev)} value={title} />
+                <textarea name="content" className="pure-input-1 content" placeholder="Content" required="" rows="10" onChange={(ev) => this.handleChangeField('content', ev)} value={content}></textarea>
+                <input type="text" name="date" className="pure-input-1 date" placeholder="Date" readOnly value={date} />
+                <button type="submit" className="pure-button pure-button-primary">Submit</button>
+              </fieldset>
+            </form>
+          </div>
         </div>
-        <div className="pure-u-1-3"></div>
       </div>
     )
   }

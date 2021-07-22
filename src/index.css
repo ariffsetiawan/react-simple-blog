@@ -46,20 +46,28 @@ nav li{
 	margin-left: auto ;
   margin-right: auto ;
   min-height: 400px;
+	line-height: 1.5;
 }
 
 .blog-post{
-	margin-top:20px;
-	margin-bottom:30px;
+	margin: 20px auto !important;
+	/* margin-top:20px;
+	margin-bottom:30px; */
+	max-width: 760px;
+}
+.single{
+	text-align: left;
 }
 .blog-heading{
 	font-size: 36px;
 	margin-bottom:20px;
 	margin-top:10px;
+	font-weight: bold;
 }
 .blog-heading a{
 	color: black;
 	text-decoration: none;
+	font-weight: bold;
 }
 .blog-date{
 	font-size: 12px;
@@ -69,6 +77,14 @@ nav li{
 }
 .sidebar{
 	float:right;
+}
+.pure-form input{
+	margin-top: 10px !important;
+	margin-bottom: 10px !important;
+}
+.pure-form textarea{
+	margin-top: 10px !important;
+	margin-bottom: 10px !important;
 }
 #button-add{
   margin : 20px;
@@ -92,7 +108,7 @@ footer{
 }
 
 .pagination-wrapper{
-	padding-top: 20px;
+	padding: 20px;
 }
 
 .pagination-wrapper ul{
@@ -128,4 +144,102 @@ footer{
 }
 .pagination > li:first-child > a, .pagination > li:first-child > span, .pagination > li:last-child > a, .pagination > li:last-child > span{
   border-radius: unset
+}
+
+/* .cb-header{
+	display: none;
+} */
+
+.shadow-sm {
+	box-shadow: 0 .125rem .25rem rgba(0,0,0,.075)!important;
+	padding : 10px 20px 10px 20px;
+	margin-bottom: 20px;
+}
+
+.button-reply {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  color: #069;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.comments-wrapper{
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.commentbox .form-element {
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.commentbox .form-element textarea {
+
+	width: 500px;
+}
+
+.commentbox .body {
+
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+}
+
+ul li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.commentbox ul li.replying-to > div {
+	background: gray;
+}
+
+.commentbox ul li .comment-content {
+
+	padding-top: 25px;
+	padding-bottom: 25px;
+}
+.commentbox ul li .comment-footer .timestamp {
+
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.cb-user-avatar{
+	object-fit: cover;
+	border-radius:50%;
+	width: 48px;
+	height: 48px;
+}
+
+.username-display{
+	vertical-align: top;
+	font-weight: bold;
+	color:#151269;
+	padding-left: 20px;
+}
+
+.timestamp-display{
+	vertical-align: top;
+	font-size: 0.9em;
+	padding-left: 15px;
+}
+
+.cb-comment-body{
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.cb-replies{
+	margin-left: 20px;
+	border-left: 1px solid #f0f0f0;
+}
+
+.cb-replies .cb-comment{
+	background-color: #d7e9f5;
 }

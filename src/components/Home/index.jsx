@@ -5,7 +5,7 @@ import ReactPaginate from 'react-paginate';
 
 const db = new Dexie('SimpleBlog');
 db.version(1).stores(
-  { posts: "++id,title,content,date" }
+  { posts: "++id,title,content,date", comments: "++id,post_id,parent_id,content,author,avatar,date" }
 )
 
 function Home() {
